@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ThinkEat Foundation — Less Food Waste. Healthier Communities.</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAEq0lEQVR4nO2YX0hbVxzHvzfmmj+uzjSxTeyqLuruXIpV1C0RIVkVlD2sbUpqGQijWCmzCM6xMvpSVhBW2cM67BSpLT5kxWoVTCs66NT1RYIa6yykxZIw0awNwezGmpjknj2UFG3V5SZaR/ED9+Ge37n397nn3N+5h0txHIf/M4KdFvgvdgXj5e0VHBgYIF805JCvLxrJgwcPyFZKrSZmQb1eX/eBshJUlgU/3i6DzTa1LZIxC0ql0qsXz/9M5fh/gCzjH7TdalgT93q91y0WC3G73X/uiGCEs2caqIPsBfgSxzA19WIUe3pvknOXP/yy9+FJOJ1OTTz3p/gu1IFA4LO+vr47LMsCAAQCAXQ6HVo6z4N5z4D0gxm4O1sNFRPAzKASnzIXkJCQAIZhYDAYqG0VnJ+fJ52dnaipqZlRKBSHAMDv95tGRka6BgYGsLCwgCXxONSlf4EQoFz5K45+bqQAwGazkdHRUdTX1/OT5Dgu6qO5uZmEQqHUjeJ1dXXEUPUuqf4unXTfvklejU9PT5P+/v7X2jc7hNE+yPj4OCktLYVAIHi2UR+xWIyzx9pw3Hj8Y5qmra/GNRoNdf/+fV7VHnWR2Gw2FBcX79usj0qlQigcwnpyEUQiETiOS91yQYqiNh09ACgsLER5efnTzfrI5XJ4vd7r0eaNeorJOhMzNDREnE4nCgoKUFRUROn1egoAQqHQRz09PTM+nw+FhYXIz89/WRjBYBBCofBhtHmjHkGaFmJlZUW/uu3JkycwmUy3XC4XrFYrAYDnz59/deWnKzNlZWUzubm58Hg8a+7j9XqxZ8+eb7dc8PDhw5icnBxe3Xb69GlDV1eXyefzYXT0DwBAa2tbi+aQBmazWRMMBnHkyJE1y0o4HI42JT/BvLy8pKmpqTVtiYmJI7W1tVRFRcUdt/sZLn1/ibAsi/T0dNTX17+c8ggsy16WSCS8BHmtgx0dHYRl2W/Wiw0ODpKmpiYSCASKN7r+2rUO4vF4uvjk5PUtNhqNLWazuXm9GE3TCAaDGy4xHo/nd44LIyUl5SSfnLwEk5OTz6lUKkxPT79W0x6PB3v37t3w2hs3bhiqq6sNfPIBMWwWAOBqy1ViPGGEUqmkHj16RKxWK+7duweO41BSUgJaSCM7JxtarVYjFAoftv7SSiorK5H5fub2bhYicByX2t7e/tT9zA1diQ4ymQwOhwM0TSMrKwsMw+yz2+1Pe3t7IRKJcPToMWRnZ/GWi1kwQmNjIwkEAvjb5YLxxAmkpKSgu7sbEokEmZmZCAaDUKvVqKqqikkO4PElWQ+FQgGtVguFQo5wOIzl5WXU1p6BVCoFy/pgsVjAMEw8KeITBIDHjx9jbGzs5TkhHDiOQCqVQKv9BC6Xa+cEFxcXIZPJYDDokZT0DgCCcDiMhQUX7HY7hodHcerUqZ0TlMvlYBgGkxOT8C0tgQIgSBBg/34ldDod0tLSQMX89r0griKZmJggvw0NQZWWhgMHDkAsFsHvD8DlcmFubg5qtRomkykuxbgEI8zOzhKHw4GlpSVIJBJkZGQgOztnn0BAbbp/fGOC28nb+2/mTbErGC+7gvGyKxgv/wJ+1Y+QeSZz9gAAAABJRU5ErkJggg==" />
+  <meta name="description" content="ThinkEat Foundation is a nonprofit working to reduce food waste and help people make healthier, more mindful use of the food they already have." />
+  <style>
+    :root{
+      --bg:#f8f7f1;
+      --surface:#ffffff;
+      --ink:#203128;
+      --muted:#66736c;
+      --green:#2f7650;
+      --green-dark:#1f5538;
+      --green-soft:#e6f2e9;
+      --gold:#dca54a;
+      --line:#dfe6df;
+      --radius:22px;
+      --shadow:0 18px 50px rgba(36,70,49,.08);
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 10% 7%,rgba(77,148,97,.12),transparent 26%),
+        radial-gradient(circle at 92% 15%,rgba(220,165,74,.10),transparent 24%),
+        var(--bg);
+      line-height:1.6;
+    }
+    a{color:inherit}
+    .wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:24px;padding:24px 0;
+    }
+    .brand{
+      display:flex;align-items:center;gap:14px;
+      text-decoration:none;font-weight:800;letter-spacing:-.02em;
+    }
+    .mark svg{width:100%;height:100%;display:block}
+    .mark{
+      width:62px;height:62px;flex:0 0 auto;
+      display:block;background:transparent;overflow:visible;
+    }
+    .mark img{display:none}
+    .navlinks{display:flex;gap:24px;align-items:center;color:var(--muted);font-size:.95rem}
+    .navlinks a{text-decoration:none}
+    .button{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:48px;padding:0 20px;border-radius:999px;
+      text-decoration:none;font-weight:750;border:1px solid transparent;
+      transition:.16s ease;
+    }
+    .button:hover{transform:translateY(-1px)}
+    .primary{background:var(--green);color:#fff;box-shadow:0 10px 24px rgba(47,118,80,.18)}
+    .primary:hover{background:var(--green-dark)}
+    .secondary{background:rgba(255,255,255,.76);border-color:var(--line)}
+    .hero{
+      display:grid;grid-template-columns:1.08fr .92fr;gap:64px;
+      align-items:center;padding:82px 0 104px;
+    }
+    .eyebrow{
+      display:inline-flex;padding:7px 11px;border-radius:999px;
+      background:var(--green-soft);color:var(--green-dark);
+      font-size:.87rem;font-weight:800;margin-bottom:18px;
+    }
+    h1{
+      margin:0;max-width:760px;
+      font-size:clamp(3rem,7vw,5.8rem);
+      line-height:.98;letter-spacing:-.06em;
+    }
+    .hero p{
+      max-width:690px;margin:27px 0 30px;
+      font-size:clamp(1.08rem,2vw,1.28rem);color:var(--muted);
+    }
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-art{
+      position:relative;min-height:460px;display:grid;place-items:center;
+    }
+    .circle{
+      position:absolute;width:390px;height:390px;border-radius:50%;
+      background:linear-gradient(145deg,rgba(64,137,87,.22),rgba(220,165,74,.16));
+    }
+    .mission-card{
+      position:relative;width:min(390px,88vw);padding:34px;
+      background:rgba(255,255,255,.92);border:1px solid var(--line);
+      border-radius:30px;box-shadow:var(--shadow);transform:rotate(1.5deg);
+    }
+    .mission-card .big{font-size:4rem;line-height:1}
+    .mission-card h3{font-size:1.55rem;margin:18px 0 8px;letter-spacing:-.035em}
+    .mission-card p{margin:0;font-size:1rem;color:var(--muted)}
+    section{padding:92px 0}
+    .section-head{max-width:760px;margin-bottom:40px}
+    .section-head h2{
+      margin:0 0 12px;font-size:clamp(2.25rem,5vw,4rem);
+      line-height:1.03;letter-spacing:-.05em;
+    }
+    .section-head p{margin:0;color:var(--muted);font-size:1.08rem}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      background:rgba(255,255,255,.82);border:1px solid var(--line);
+      border-radius:var(--radius);padding:28px;box-shadow:0 12px 30px rgba(36,70,49,.05);
+    }
+    .icon{
+      width:48px;height:48px;border-radius:14px;display:grid;place-items:center;
+      background:var(--green-soft);font-size:1.35rem;margin-bottom:18px;
+    }
+    .card h3{margin:0 0 8px;font-size:1.2rem;letter-spacing:-.025em}
+    .card p{margin:0;color:var(--muted)}
+    .app{
+      display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;
+      padding:42px;border-radius:32px;background:#fff;border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+    .phone{
+      width:min(310px,85vw);margin:auto;padding:16px;
+      border:8px solid #213129;border-radius:38px;background:#fdfdf8;
+      box-shadow:0 18px 40px rgba(22,46,30,.12);
+    }
+    .notch{width:92px;height:20px;background:#213129;margin:-3px auto 15px;border-radius:0 0 14px 14px}
+    .screen{display:grid;gap:11px}
+    .screen h4{margin:6px 4px 2px;font-size:1.24rem}
+    .food{
+      display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:10px;
+      border:1px solid #e5ebe5;border-radius:15px;padding:11px;background:#fff;
+    }
+    .food span:first-child{font-size:1.35rem}
+    .food strong{display:block;font-size:.9rem}
+    .food small{display:block;color:var(--muted);font-size:.75rem}
+    .tag{font-size:.68rem;padding:5px 7px;border-radius:999px;background:var(--green-soft);color:var(--green-dark);font-weight:800}
+    .appcopy h2{font-size:clamp(2rem,4vw,3.25rem);line-height:1.05;letter-spacing:-.045em;margin:0 0 16px}
+    .appcopy p{color:var(--muted);font-size:1.06rem}
+    .appcopy ul{padding-left:20px;color:var(--muted)}
+    .impact-band{
+      background:var(--green-dark);color:#fff;border-radius:30px;padding:46px;
+      display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center;
+    }
+    .impact-band h2{margin:0;font-size:clamp(2.1rem,4vw,3.6rem);line-height:1.05;letter-spacing:-.05em}
+    .impact-band p{margin:15px 0 0;color:#d7e8dd}
+    .impact-points{display:grid;gap:12px}
+    .impact-points div{
+      padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.09);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .cta{text-align:center;max-width:820px;margin:auto}
+    .cta h2{font-size:clamp(2.3rem,5vw,4.3rem);line-height:1;letter-spacing:-.055em;margin:0 0 18px}
+    .cta p{color:var(--muted);font-size:1.08rem;margin:0 auto 28px;max-width:650px}
+    footer{
+      border-top:1px solid var(--line);padding:34px 0 46px;margin-top:30px;
+      color:var(--muted);font-size:.92rem;
+    }
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:820px){
+      .navlinks{display:none}
+      .hero,.app,.impact-band{grid-template-columns:1fr}
+      .hero{padding-top:48px;gap:34px}
+      .hero-art{min-height:370px}
+      .grid3{grid-template-columns:1fr}
+      .app{padding:28px}
+      section{padding:70px 0}
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="ThinkEat Foundation home">
+        <span class="mark"><svg viewBox="0 0 64 64" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- outer bulb -->
+    <path d="M23 15
+             C18 18, 14 24, 14 31
+             C14 39, 18.8 44.2, 24.2 47.8
+             C25.4 48.6, 26 49.8, 26 51.2
+             V52
+             H38
+             V51.2
+             C38 49.8, 38.6 48.6, 39.8 47.8
+             C45.2 44.2, 50 39, 50 31
+             C50 24, 46 18, 41 15"
+          stroke="#8E8E8E" stroke-width="2.6"/>
+    <!-- plant stem -->
+    <path d="M32 25 V41" stroke="#8E8E8E" stroke-width="2.4"/>
+    <path d="M32 34 C30 31, 27 29.5, 24.5 29" stroke="#8E8E8E" stroke-width="2.4"/>
+    <path d="M32 34 C34 31, 37 29.5, 39.5 29" stroke="#8E8E8E" stroke-width="2.4"/>
+    <!-- leaves -->
+    <path d="M31 24
+             C27.5 21.8, 25 19.2, 24.8 14.8
+             C29.2 15.1, 31.7 17.8, 33.3 21.6
+             C32.6 22.4, 31.8 23.2, 31 24 Z"
+          fill="#B3D45C" stroke="#7DA11E" stroke-width="1.7"/>
+    <path d="M33 24
+             C36.5 21.5, 39 18.9, 39.2 14.3
+             C34.8 14.7, 32.3 17.5, 30.7 21.5
+             C31.4 22.4, 32.2 23.1, 33 24 Z"
+          fill="#89BC22" stroke="#6B9415" stroke-width="1.7"/>
+    <!-- bulb base -->
+    <path d="M25.5 52.5 H38.5" stroke="#8E8E8E" stroke-width="2.2"/>
+    <path d="M25.5 56 H38.5" stroke="#8E8E8E" stroke-width="2.2"/>
+    <path d="M27.8 59 H36.2" stroke="#8E8E8E" stroke-width="2.2"/>
+  </g>
+</svg></span>
+        <span>ThinkEat Foundation</span>
+      </a>
+      <div class="navlinks">
+        <a href="#mission">Mission</a>
+        <a href="#work">What We Do</a>
+        <a href="#app">ThinkEat App</a>
+        <a href="#get-involved">Get Involved</a>
+      </div>
+      <a class="button primary" href="#get-involved">Support the Mission</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <span class="eyebrow">A nonprofit for healthier, less wasteful food habits</span>
+        <h1>Waste less food. Build healthier communities.</h1>
+        <p>
+          ThinkEat Foundation helps people make better use of the food they already have—
+          reducing household food waste while encouraging healthier, more mindful eating.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#mission">Our Mission</a>
+          <a class="button secondary" href="#app">Explore the ThinkEat App</a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="circle"></div>
+        <div class="mission-card">
+          <div class="big">🥕</div>
+          <h3>Small household choices can create meaningful impact.</h3>
+          <p>
+            We connect practical tools, education, and community action to help food go
+            where it belongs: nourishing people instead of becoming waste.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section id="mission">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Our mission</span>
+          <h2>Make mindful food use easier in everyday life.</h2>
+          <p>
+            Food waste and unhealthy eating habits often begin with the same everyday problem:
+            losing track of what we have, what needs attention, and what can be used next.
+            ThinkEat Foundation focuses on practical ways to close that gap.
+          </p>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <div class="icon">♻️</div>
+            <h3>Reduce food waste</h3>
+            <p>Help households use more of the groceries they purchase before food is forgotten or discarded.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🥗</div>
+            <h3>Support healthier choices</h3>
+            <p>Encourage people to plan meals around available food and build more intentional eating habits.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🤝</div>
+            <h3>Strengthen community impact</h3>
+            <p>Turn better household habits into broader awareness, education, and community participation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">What we do</span>
+          <h2>Practical tools, education, and action.</h2>
+          <p>
+            Our work is centered on making food stewardship understandable and achievable—
+            not complicated. We aim to meet people where everyday food decisions actually happen.
+          </p>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <div class="icon">📱</div>
+            <h3>Technology</h3>
+            <p>Develop accessible tools that help people keep track of food, reduce waste, and learn from their habits.</p>
+          </article>
+          <article class="card">
+            <div class="icon">💡</div>
+            <h3>Education</h3>
+            <p>Share practical guidance for food storage, meal planning, waste reduction, and healthier everyday choices.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🌎</div>
+            <h3>Community</h3>
+            <p>Build partnerships and programs that make responsible food use a shared community practice.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="app">
+      <div class="wrap">
+        <div class="app">
+          <div>
+            <div class="phone" aria-label="Illustration of the ThinkEat app">
+              <div class="notch"></div>
+              <div class="screen">
+                <h4>Your kitchen</h4>
+                <div class="food">
+                  <span>🥛</span><div><strong>Milk</strong><small>Use soon</small></div><span class="tag">2 days</span>
+                </div>
+                <div class="food">
+                  <span>🥬</span><div><strong>Spinach</strong><small>Fridge</small></div><span class="tag">Fresh</span>
+                </div>
+                <div class="food">
+                  <span>🍎</span><div><strong>Apples</strong><small>Pantry</small></div><span class="tag">5 left</span>
+                </div>
+                <div class="food">
+                  <span>🍗</span><div><strong>Chicken</strong><small>Freezer</small></div><span class="tag">Stored</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="appcopy">
+            <span class="eyebrow">One way we put the mission into practice</span>
+            <h2>Meet the ThinkEat app.</h2>
+            <p>
+              The ThinkEat app is a practical household tool designed to help people understand
+              what food they have, what needs attention, and how their grocery choices turn out.
+            </p>
+            <ul>
+              <li>Keep track of food across the fridge, freezer, and pantry.</li>
+              <li>Notice items before they are forgotten or expire.</li>
+              <li>Record whether food was consumed, donated, or thrown away.</li>
+              <li>Build awareness of personal food-use habits over time.</li>
+            </ul>
+            <a class="button primary" href="https://apps.apple.com/us/app/thinkeat/id6796200052">View ThinkEat on the App Store</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="impact-band">
+          <div>
+            <h2>Better food habits can benefit both people and the planet.</h2>
+            <p>
+              We believe useful technology should support behavior change—not become another task.
+              ThinkEat Foundation is building toward simple, measurable ways to help households waste
+              less and make more intentional use of food.
+            </p>
+          </div>
+          <div class="impact-points">
+            <div>Reduce avoidable household food waste</div>
+            <div>Encourage more intentional grocery use</div>
+            <div>Help families understand their food habits</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="get-involved">
+      <div class="wrap cta">
+        <span class="eyebrow">Get involved</span>
+        <h2>Help make better food habits easier for everyone.</h2>
+        <p>
+          ThinkEat Foundation is at the beginning of its journey. We welcome people, partners,
+          educators, and communities who share the goal of reducing food waste and supporting healthier living.
+        </p>
+        <div class="actions" style="justify-content:center">
+          <a class="button primary" href="mailto:hello@thinkeat.org">Contact Us</a>
+          <a class="button secondary" href="#app">Try ThinkEat</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div>© 2026 ThinkEat Foundation. All rights reserved.</div>
+      <div>Less food waste. Healthier communities.</div>
+    </div>
+  </footer>
+</body>
+</html>
