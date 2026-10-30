@@ -37,11 +37,11 @@
     .wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
     .nav{
       display:flex;align-items:center;justify-content:space-between;
-      gap:24px;padding:24px 0;
+      gap:22px;padding:25px 0;
     }
     .brand{
-      display:flex;align-items:center;gap:14px;
-      text-decoration:none;font-weight:800;letter-spacing:-.02em;
+      display:flex;align-items:center;gap:11px;
+      text-decoration:none;font-size:1.13rem;font-weight:800;letter-spacing:-.03em;
     }
     .mark svg{width:100%;height:100%;display:block}
     .mark{
@@ -49,7 +49,7 @@
       display:block;background:transparent;overflow:visible;
     }
     .mark img{width:100%;height:100%;display:block;object-fit:contain}
-    .navlinks{display:flex;gap:24px;align-items:center;color:var(--muted);font-size:.95rem}
+    .navlinks{display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:.95rem;font-weight:700}
     .navlinks a{text-decoration:none}
     .button{
       display:inline-flex;align-items:center;justify-content:center;
@@ -160,7 +160,6 @@
     .footer-legal a{color:var(--green-dark);text-decoration:none}
     .footer-legal a:hover{text-decoration:underline}
     @media(max-width:820px){
-      .navlinks{display:none}
       .hero,.app,.impact-band{grid-template-columns:1fr}
       .hero{padding-top:48px;gap:34px}
       .hero-art{min-height:370px}
@@ -168,6 +167,7 @@
       .app{padding:28px}
       section{padding:70px 0}
     }
+    @media(max-width:700px){.nav{align-items:flex-start;flex-direction:column;gap:13px;padding:16px 0}}
   </style>
 </head>
 <body>
@@ -182,7 +182,6 @@
         <a href="about.html">About &amp; Mission</a>
         <a href="contact.html">Contact Us</a>
       </div>
-      <a class="button primary" href="about.html">Support the Mission</a>
     </nav>
   </header>
 
